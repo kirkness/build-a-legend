@@ -3148,7 +3148,7 @@ var index_App = function (_Component) {
   }
 
   App.prototype.initFirstStep = function initFirstStep() {
-    this.setState({ step: 3 });
+    this.setState({ step: 0 });
   };
 
   App.prototype.componentDidMount = function componentDidMount() {
