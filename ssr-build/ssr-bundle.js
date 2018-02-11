@@ -2606,11 +2606,12 @@ var _en, _id, _it, _th, _es, _pt, _tr;
 		neymar: 'NEYMAR',
 		ronaldo: 'RONALDO',
 		messi: 'MESSI',
-		complete: '100% COMPLETE',
+		percentage: '{percentage}%',
+		complete: 'COMPLETE',
 		next: 'NEXT',
 		revealYourLegend: 'REVEAL YOUR LEGEND',
 		legendStatus: 'LEGEND STATUS',
-		youAreA: 'YOU ARE A: ',
+		youAreA: 'YOU ARE A: {legendStatus}',
 		warrior: 'WARRIOR ',
 		survivor: 'SURVIVOR ',
 		riskTakerRuleBreaker: 'RISK TAKER',
@@ -2661,11 +2662,12 @@ var _en, _id, _it, _th, _es, _pt, _tr;
 		neymar: 'NEYMAR',
 		ronaldo: 'RONALDO',
 		messi: 'MESSI',
-		complete: '100% selesai',
+		percentage: '{percentage}%',
+		complete: 'selesai',
 		next: 'Berikut',
 		revealYourLegend: 'Lihat legenda Anda',
 		legendStatus: 'Status legenda',
-		youAreA: 'Anda adalah seorang:',
+		youAreA: 'Anda adalah seorang: {legendStatus}',
 		warrior: 'Prajurit',
 		survivor: 'Pejuang',
 		riskTakerRuleBreaker: 'Penentang',
@@ -2700,11 +2702,12 @@ var _en, _id, _it, _th, _es, _pt, _tr;
 		neymar: 'NEYMAR',
 		ronaldo: 'RONALDO',
 		messi: 'MESSI',
-		complete: '100%  completato',
+		percentage: '{percentage}%',
+		complete: 'completato',
 		next: 'Prossimo',
 		revealYourLegend: 'Rivela la tua leggenda',
 		legendStatus: 'Stato della tua leggenda',
-		youAreA: 'Sei un: ',
+		youAreA: 'Sei un: {legendStatus}',
 		warrior: 'Guerriero',
 		survivor: 'Sopravvissuto ',
 		riskTakerRuleBreaker: 'Amante del rischio/trasgressivo ',
@@ -2778,11 +2781,12 @@ var _en, _id, _it, _th, _es, _pt, _tr;
 		neymar: 'NEYMAR',
 		ronaldo: 'RONALDO',
 		messi: 'MESSI',
-		complete: '100% completado',
+		percentage: '{percentage}%',
+		complete: 'completado',
 		next: 'Siguiente',
 		revealYourLegend: 'Revela tu leyenda',
 		legendStatus: 'Esta de leyenda',
-		youAreA: 'Eres:',
+		youAreA: 'Eres: {legendStatus}',
 		warrior: 'Guerrero',
 		survivor: 'Sobreviviente',
 		riskTakerRuleBreaker: 'Arriesgado / Rompedor',
@@ -2833,11 +2837,12 @@ var _en, _id, _it, _th, _es, _pt, _tr;
 		neymar: 'NEYMAR',
 		ronaldo: 'RONALDO',
 		messi: 'MESSI',
-		complete: '100% finalizado',
+		percentage: '{percentage}%',
+		complete: 'finalizado',
 		next: 'Próximo',
 		revealYourLegend: 'Revele sua lenda',
 		legendStatus: '',
-		youAreA: 'Você é um:',
+		youAreA: 'Você é um: {legendStatus}',
 		warrior: 'Guerreiro',
 		survivor: 'Sobrevivente',
 		riskTakerRuleBreaker: 'Improvisador',
@@ -2872,11 +2877,12 @@ var _en, _id, _it, _th, _es, _pt, _tr;
 		neymar: 'NEYMAR',
 		ronaldo: 'RONALDO',
 		messi: 'MESSI',
-		complete: '%100 Tamamlandı',
+		percentage: '%{percentage}',
+		complete: 'Tamamlandı',
 		next: 'Sonraki',
 		revealYourLegend: 'Efsaneni Ortaya Çıkar',
 		legendStatus: 'Efsane Durumu',
-		youAreA: 'Sen bir: ',
+		youAreA: 'Sen bir: {legendStatus}',
 		warrior: 'Savaşçı',
 		survivor: 'Kurtulan',
 		riskTakerRuleBreaker: 'Risk Alıcı / Kural Belirleyici',
@@ -3084,7 +3090,17 @@ var step_builder_Builder = function (_Component) {
     }
     var values = Object.values(this.state.partsComplete).filter(Boolean);
     if (values.length) {
-      return values.length / 4 * 100 + '% complete';
+      return [Object(preact_min["h"])(
+        'span',
+        null,
+        localised.formatString(localised.percentage, {
+          percentage: values.length / 4 * 100
+        }).join('') + ' '
+      ), Object(preact_min["h"])(
+        'span',
+        { className: step_builder_styles_default.a.red },
+        localised.complete
+      )];
     }
     return localised.chooseYourSkill;
   };
@@ -3623,13 +3639,6 @@ var step_result_Score = function Score(props) {
 };
 
 // eslint-disable-next-line
-
-var _ref2 = Object(preact_min["h"])(
-	'div',
-	null,
-	'LEGEND STATUS'
-);
-
 /* harmony default export */ var step_result = (function (_ref) {
 	var transitionState = _ref.transitionState,
 	    onDownload = _ref.onDownload,
@@ -3669,12 +3678,15 @@ var _ref2 = Object(preact_min["h"])(
 			Object(preact_min["h"])(
 				'div',
 				{ className: step_result_styles_default.a.legendStatusWrapper },
-				_ref2,
 				Object(preact_min["h"])(
 					'div',
 					null,
-					'YOU ARE A ',
-					legendStatus
+					localised.legendStatus
+				),
+				Object(preact_min["h"])(
+					'div',
+					null,
+					localised.formatString(localised.youAreA, { legendStatus: legendStatus })
 				)
 			),
 			Object(preact_min["h"])(
@@ -5189,7 +5201,7 @@ module.exports = isEqual;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"settings":"'../../style/settings.css'","transition":"all 500ms ease","wrapper":"wrapper__3DbRJ","wrapperEntering":"wrapperEntering__2C5K9","wrapperEntered":"wrapperEntered__1L_YU","body":"body__1OdV0","optionsWrapper":"optionsWrapper__l3gsK","optionWrapper":"optionWrapper__PxQOf","optionImage":"optionImage__1DTPe","optionLabel":"optionLabel__1TCMH","torsoOptionWrapper":"torsoOptionWrapper__1Qi_D","pageFooter":"pageFooter__2fSR9","pageTitle":"pageTitle__3LE_V","titleComplete":"titleComplete__2QFNF","button":"button__1NFoj"};
+module.exports = {"settings":"'../../style/settings.css'","transition":"all 500ms ease","wrapper":"wrapper__3DbRJ","wrapperEntering":"wrapperEntering__2C5K9","wrapperEntered":"wrapperEntered__1L_YU","body":"body__1OdV0","optionsWrapper":"optionsWrapper__l3gsK","optionWrapper":"optionWrapper__PxQOf","optionImage":"optionImage__1DTPe","optionLabel":"optionLabel__1TCMH","torsoOptionWrapper":"torsoOptionWrapper__1Qi_D","red":"red__z5EUV","pageFooter":"pageFooter__2fSR9","pageTitle":"pageTitle__3LE_V","titleComplete":"titleComplete__2QFNF","button":"button__1NFoj"};
 
 /***/ }),
 
