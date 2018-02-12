@@ -2076,27 +2076,27 @@ var PARTS = {
 };
 
 var PLAYER_IMAGES = {
-	SPEED_AUBAMEYANG: '../../assets/parts/Speed_Aubameyang.png',
-	SPEED_BALE: '../../assets/parts/Speed_Bale.png',
-	SPEED_SALAH: '../../assets/parts/Speed_Salah.png',
-	SPEED_SANCHEZ: '../../assets/parts/Speed_Sanchez.png',
-	STRENGTH_AGUERO: '../../assets/parts/Strength_Aguero.png',
-	STRENGTH_CENK_TOSUN: '../../assets/parts/Strength_CenkTosun.png',
-	STRENGTH_CHIELLINI: '../../assets/parts/Strength_Chiellini.png',
-	STRENGTH_DIEGO_COSTA: '../../assets/parts/Strength_DiegoCosta.png',
-	STRENGTH_FALCAO: '../../assets/parts/Strength_Falcao.png',
-	STRENGTH_LEWANDOWSKI: '../../assets/parts/Strength_Lewandowski.png', // TODO
-	STRENGTH_LUKAKU: '../../assets/parts/Strength_Lukaku.png',
-	STRENGTH_VAN_DIJK: '../../assets/parts/Strength_VanDijk.png',
-	TECHNIQUE_MESSI: '../../assets/parts/Technique_messi.png',
-	TECHNIQUE_NEYMAR: '../../assets/parts/Technique_neymar.png',
-	TECHNIQUE_RONALDO: '../../assets/parts/Technique_ronaldo.png',
-	VISION_ARDA_TURAN: '../../assets/parts/Vision_ArdaTuran.png',
-	VISION_DE_BRUYNE: '../../assets/parts/Vision_DeBruyne.png',
-	VISION_JAMES_RODRIGUEZ: '../../assets/parts/Vision_JamesRodriguez.png', // TODO
-	VISION_KROOS: '../../assets/parts/Vision_Kroos.png',
-	VISION_MODRIC: '../../assets/parts/Vision_Modric.png',
-	VISION_OZIL: '../../assets/parts/Vision_Ozil.png'
+	SPEED_AUBAMEYANG: 'assets/parts/Speed_Aubameyang.png',
+	SPEED_BALE: 'assets/parts/Speed_Bale.png',
+	SPEED_SALAH: 'assets/parts/Speed_Salah.png',
+	SPEED_SANCHEZ: 'assets/parts/Speed_Sanchez.png',
+	STRENGTH_AGUERO: 'assets/parts/Strength_Aguero.png',
+	STRENGTH_CENK_TOSUN: 'assets/parts/Strength_CenkTosun.png',
+	STRENGTH_CHIELLINI: 'assets/parts/Strength_Chiellini.png',
+	STRENGTH_DIEGO_COSTA: 'assets/parts/Strength_DiegoCosta.png',
+	STRENGTH_FALCAO: 'assets/parts/Strength_Falcao.png',
+	STRENGTH_LEWANDOWSKI: 'assets/parts/Strength_Lewandowski.png', // TODO
+	STRENGTH_LUKAKU: 'assets/parts/Strength_Lukaku.png',
+	STRENGTH_VAN_DIJK: 'assets/parts/Strength_VanDijk.png',
+	TECHNIQUE_MESSI: 'assets/parts/Technique_messi.png',
+	TECHNIQUE_NEYMAR: 'assets/parts/Technique_neymar.png',
+	TECHNIQUE_RONALDO: 'assets/parts/Technique_ronaldo.png',
+	VISION_ARDA_TURAN: 'assets/parts/Vision_ArdaTuran.png',
+	VISION_DE_BRUYNE: 'assets/parts/Vision_DeBruyne.png',
+	VISION_JAMES_RODRIGUEZ: 'assets/parts/Vision_JamesRodriguez.png', // TODO
+	VISION_KROOS: 'assets/parts/Vision_Kroos.png',
+	VISION_MODRIC: 'assets/parts/Vision_Modric.png',
+	VISION_OZIL: 'assets/parts/Vision_Ozil.png'
 };
 
 var FOOTBALLERS = {
