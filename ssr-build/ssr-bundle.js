@@ -1533,7 +1533,7 @@ module.exports = exports['default'];
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"wrapper":"wrapper__3K_du","bodyWrapper":"bodyWrapper__1SqsB","partImage":"partImage__XxffH","leftSection":"leftSection__264DY","rightSection":"rightSection__3rvLR","scoreWrapper":"scoreWrapper__McSJe","scoreTitle":"scoreTitle__2g-sH","scoreValue":"scoreValue__uSKAo","legendStatusWrapper":"legendStatusWrapper__9gIes","legendRatingWrapper":"legendRatingWrapper__3Anv-","button":"button__3fKwp","buttonFooter":"buttonFooter__2KV5a","playAgainButton":"playAgainButton__2cQos","footerRight":"footerRight__2r-jn","desktopFooter":"desktopFooter__2CD6b","mobileFooter":"mobileFooter__SjGwf"};
+module.exports = {"wrapper":"wrapper__3K_du","bodyWrapper":"bodyWrapper__1SqsB","bodyBg":"bodyBg__3xwlE","partImage":"partImage__XxffH","leftSection":"leftSection__264DY","rightSection":"rightSection__3rvLR","scoreWrapper":"scoreWrapper__McSJe","scoreTitle":"scoreTitle__2g-sH","scoreValue":"scoreValue__uSKAo","legendStatusWrapper":"legendStatusWrapper__9gIes","legendRatingWrapper":"legendRatingWrapper__3Anv-","button":"button__3fKwp","buttonFooter":"buttonFooter__2KV5a","playAgainButton":"playAgainButton__2cQos","footerRight":"footerRight__2r-jn","desktopFooter":"desktopFooter__2CD6b","mobileFooter":"mobileFooter__SjGwf"};
 
 /***/ }),
 
@@ -2073,6 +2073,163 @@ var dom_to_image_default = /*#__PURE__*/__webpack_require__.n(dom_to_image);
 var style = __webpack_require__("rq4c");
 var style_default = /*#__PURE__*/__webpack_require__.n(style);
 
+// CONCATENATED MODULE: ./consts.js
+var _parts, _parts2, _parts3, _parts4, _parts5, _parts6, _parts7, _parts8, _parts9, _parts10, _parts11, _parts12, _parts13, _parts14, _parts15, _parts16, _parts17, _parts18, _parts19;
+
+// @flow
+var TRANSIATION_DURATION = 500;
+var FACEBOOK_URL = 'https://www.facebook.com/sharer/sharer.php?u=';
+var TWITTER_URL = 'https://twitter.com/home?status=';
+var WHATSAPP_URL = 'https://api.whatsapp.com/send?text=';
+
+var PARTS = {
+	HEAD: 'HEAD',
+	TORSO: 'TORSO',
+	UPPER: 'UPPER',
+	LOWER: 'LOWER'
+};
+
+var PLAYER_IMAGES = {
+	SPEED_AUBAMEYANG: '../../assets/parts/Speed_Aubameyang.png',
+	SPEED_BALE: '../../assets/parts/Speed_Bale.png',
+	SPEED_SALAH: '../../assets/parts/Speed_Salah.png',
+	SPEED_SANCHEZ: '../../assets/parts/Speed_Sanchez.png',
+	STRENGTH_AGUERO: '../../assets/parts/Strength_Aguero.png',
+	STRENGTH_CENK_TOSUN: '../../assets/parts/Strength_CenkTosun.png',
+	STRENGTH_CHIELLINI: '../../assets/parts/Strength_Chiellini.png',
+	STRENGTH_DIEGO_COSTA: '../../assets/parts/Strength_DiegoCosta.png',
+	STRENGTH_FALCAO: '../../assets/parts/Strength_Falcao.png',
+	STRENGTH_LEWANDOWSKI: '../../assets/parts/Strength_Lewandowski.png', // TODO
+	STRENGTH_LUKAKU: '../../assets/parts/Strength_Lukaku.png',
+	STRENGTH_VAN_DIJK: '../../assets/parts/Strength_VanDijk.png',
+	TECHNIQUE_MESSI: '../../assets/parts/Technique_messi.png',
+	TECHNIQUE_NEYMAR: '../../assets/parts/Technique_neymar.png',
+	TECHNIQUE_RONALDO: '../../assets/parts/Technique_ronaldo.png',
+	VISION_ARDA_TURAN: '../../assets/parts/Vision_ArdaTuran.png',
+	VISION_DE_BRUYNE: '../../assets/parts/Vision_DeBruyne.png',
+	VISION_JAMES_RODRIGUEZ: '../../assets/parts/Vision_JamesRodriguez.png', // TODO
+	VISION_KROOS: '../../assets/parts/Vision_Kroos.png',
+	VISION_MODRIC: '../../assets/parts/Vision_Modric.png',
+	VISION_OZIL: '../../assets/parts/Vision_Ozil.png'
+};
+
+var FOOTBALLERS = {
+	OZIL: {
+		id: 'OZIL',
+		label: 'Ozil',
+		score: 89,
+		parts: (_parts = {}, _parts[PARTS.HEAD] = PLAYER_IMAGES.VISION_OZIL, _parts)
+	},
+	MODRIC: {
+		id: 'MODRIC',
+		label: 'Modric',
+		score: 93,
+		parts: (_parts2 = {}, _parts2[PARTS.HEAD] = PLAYER_IMAGES.VISION_MODRIC, _parts2)
+	},
+	DE_BRUYNE: {
+		id: 'DE_BRUYNE',
+
+		label: 'De Bruyne',
+		score: 91,
+		parts: (_parts3 = {}, _parts3[PARTS.HEAD] = PLAYER_IMAGES.VISION_DE_BRUYNE, _parts3)
+	},
+	AGUERO: {
+		id: 'AGUERO',
+		label: 'Aguero',
+		score: 87,
+		parts: (_parts4 = {}, _parts4[PARTS.TORSO] = PLAYER_IMAGES.STRENGTH_AGUERO, _parts4)
+	},
+	VAN_DIJK: {
+		id: 'VAN_DIJK',
+		label: 'Van Dijk',
+		score: 88,
+		parts: (_parts5 = {}, _parts5[PARTS.TORSO] = PLAYER_IMAGES.STRENGTH_VAN_DIJK, _parts5)
+	},
+	LUKAKU: {
+		id: 'LUKAKU',
+		label: 'Lukaku',
+		score: 90,
+		parts: (_parts6 = {}, _parts6[PARTS.TORSO] = PLAYER_IMAGES.STRENGTH_LUKAKU, _parts6)
+	},
+	BALE: {
+		id: 'BALE',
+		label: 'Bale',
+		score: 92,
+		parts: (_parts7 = {}, _parts7[PARTS.UPPER] = PLAYER_IMAGES.SPEED_BALE, _parts7)
+	},
+	ALEXIS_SANCHEZ: {
+		id: 'ALEXIS_SANCHEZ',
+		label: 'Alexis Sanchez',
+		score: 91,
+		parts: (_parts8 = {}, _parts8[PARTS.UPPER] = PLAYER_IMAGES.SPEED_SANCHEZ, _parts8)
+	},
+	SALAH: {
+		id: 'SALAH',
+		label: 'Salah',
+		score: 90,
+		parts: (_parts9 = {}, _parts9[PARTS.UPPER] = PLAYER_IMAGES.SPEED_SALAH, _parts9)
+	},
+	NEYMAR: {
+		id: 'NEYMAR',
+		label: 'Neymar',
+		score: 90,
+		parts: (_parts10 = {}, _parts10[PARTS.LOWER] = PLAYER_IMAGES.TECHNIQUE_NEYMAR, _parts10)
+	},
+	RONALDO: {
+		id: 'RONALDO',
+		label: 'Ronaldo',
+		score: 92,
+		parts: (_parts11 = {}, _parts11[PARTS.LOWER] = PLAYER_IMAGES.TECHNIQUE_RONALDO, _parts11)
+	},
+	MESSI: {
+		id: 'MESSI',
+		label: 'Messi',
+		score: 93,
+		parts: (_parts12 = {}, _parts12[PARTS.LOWER] = PLAYER_IMAGES.TECHNIQUE_MESSI, _parts12)
+	},
+	DIEGO_COSTA: {
+		id: 'DIEGO_COSTA',
+		label: 'Diego Costa',
+		score: 91,
+		parts: (_parts13 = {}, _parts13[PARTS.TORSO] = PLAYER_IMAGES.STRENGTH_DIEGO_COSTA, _parts13)
+	},
+	CHIELLINI: {
+		id: 'CHIELLINI',
+		label: 'Chiellini',
+		score: 90,
+		parts: (_parts14 = {}, _parts14[PARTS.TORSO] = PLAYER_IMAGES.STRENGTH_CHIELLINI, _parts14)
+	},
+	KROOS: {
+		id: 'KROOS',
+		label: 'Kroos',
+		score: 92,
+		parts: (_parts15 = {}, _parts15[PARTS.HEAD] = PLAYER_IMAGES.VISION_KROOS, _parts15)
+	},
+	FALCAO: {
+		id: 'FALCAO',
+		label: 'Falcao',
+		score: 89,
+		parts: (_parts16 = {}, _parts16[PARTS.TORSO] = PLAYER_IMAGES.STRENGTH_FALCAO, _parts16)
+	},
+	AUBAMEYANG: {
+		id: 'AUBAMEYANG',
+		label: 'Aubameyang',
+		score: 90,
+		parts: (_parts17 = {}, _parts17[PARTS.UPPER] = PLAYER_IMAGES.SPEED_AUBAMEYANG, _parts17)
+	},
+	ARDA_TURAN: {
+		id: 'ARDA_TURAN',
+		label: 'Arda Turan',
+		score: 87,
+		parts: (_parts18 = {}, _parts18[PARTS.HEAD] = PLAYER_IMAGES.VISION_ARDA_TURAN, _parts18)
+	},
+	CENK_TOSU: {
+		id: 'CENK_TOSU',
+		label: 'Cenk Tosu',
+		score: 88,
+		parts: (_parts19 = {}, _parts19[PARTS.TORSO] = PLAYER_IMAGES.STRENGTH_CENK_TOSUN, _parts19)
+	}
+};
 // EXTERNAL MODULE: ../node_modules/preact-compat/dist/preact-compat.es.js
 var preact_compat_es = __webpack_require__("eW0v");
 
@@ -2461,120 +2618,6 @@ var react_localization_LocalizedStrings = function () {
 }();
 
 
-// CONCATENATED MODULE: ./consts.js
-var _parts, _parts2, _parts3, _parts4, _parts5, _parts6, _parts7, _parts8, _parts9, _parts10, _parts11, _parts12, _parts13, _parts14, _parts15, _parts16, _parts17, _parts18, _parts19;
-
-
-
-var TRANSIATION_DURATION = 500;
-var FACEBOOK_URL = 'https://www.facebook.com/sharer/sharer.php?u=';
-var TWITTER_URL = 'https://twitter.com/home?status=';
-var WHATSAPP_URL = 'https://api.whatsapp.com/send?text=';
-
-var PARTS = {
-	HEAD: 'HEAD',
-	TORSO: 'TORSO',
-	UPPER: 'UPPER',
-	LOWER: 'LOWER'
-};
-
-var FOOTBALLERS = {
-	OZIL: {
-		label: 'Ozil',
-		score: 89,
-		parts: (_parts = {}, _parts[PARTS.HEAD] = images_0.headPart, _parts[PARTS.TORSO] = images_0.torsoPart, _parts[PARTS.UPPER] = images_0.upper, _parts[PARTS.LOWER] = images_0.lower, _parts)
-	},
-	MODRIC: {
-		label: 'Modric',
-		score: 93,
-		parts: (_parts2 = {}, _parts2[PARTS.HEAD] = images_0.headPart, _parts2[PARTS.TORSO] = images_0.torsoPart, _parts2[PARTS.UPPER] = images_0.upper, _parts2[PARTS.LOWER] = images_0.lower, _parts2)
-	},
-	DE_BRUYNE: {
-		label: 'De Bruyne',
-		score: 91,
-		parts: (_parts3 = {}, _parts3[PARTS.HEAD] = images_0.headPart, _parts3[PARTS.TORSO] = images_0.torsoPart, _parts3[PARTS.UPPER] = images_0.upper, _parts3[PARTS.LOWER] = images_0.lower, _parts3)
-	},
-	AGUERO: {
-		label: 'Aguero',
-		score: 87,
-		parts: (_parts4 = {}, _parts4[PARTS.HEAD] = images_0.headPart, _parts4[PARTS.TORSO] = images_0.torsoPart, _parts4[PARTS.UPPER] = images_0.upper, _parts4[PARTS.LOWER] = images_0.lower, _parts4)
-	},
-	VAN_DIJK: {
-		label: 'Van Dijk',
-		score: 88,
-		parts: (_parts5 = {}, _parts5[PARTS.HEAD] = images_0.headPart, _parts5[PARTS.TORSO] = images_0.torsoPart, _parts5[PARTS.UPPER] = images_0.upper, _parts5[PARTS.LOWER] = images_0.lower, _parts5)
-	},
-	LUKAKU: {
-		label: 'Lukaku',
-		score: 90,
-		parts: (_parts6 = {}, _parts6[PARTS.HEAD] = images_0.headPart, _parts6[PARTS.TORSO] = images_0.torsoPart, _parts6[PARTS.UPPER] = images_0.upper, _parts6[PARTS.LOWER] = images_0.lower, _parts6)
-	},
-	BALE: {
-		label: 'Bale',
-		score: 92,
-		parts: (_parts7 = {}, _parts7[PARTS.HEAD] = images_0.headPart, _parts7[PARTS.TORSO] = images_0.torsoPart, _parts7[PARTS.UPPER] = images_0.upper, _parts7[PARTS.LOWER] = images_0.lower, _parts7)
-	},
-	ALEXIS_SANCHEZ: {
-		label: 'Alexis Sanchez',
-		score: 91,
-		parts: (_parts8 = {}, _parts8[PARTS.HEAD] = images_0.headPart, _parts8[PARTS.TORSO] = images_0.torsoPart, _parts8[PARTS.UPPER] = images_0.upper, _parts8[PARTS.LOWER] = images_0.lower, _parts8)
-	},
-	SALAH: {
-		label: 'Salah',
-		score: 90,
-		parts: (_parts9 = {}, _parts9[PARTS.HEAD] = images_0.headPart, _parts9[PARTS.TORSO] = images_0.torsoPart, _parts9[PARTS.UPPER] = images_0.upper, _parts9[PARTS.LOWER] = images_0.lower, _parts9)
-	},
-	NEYMAR: {
-		label: 'Neymar',
-		score: 90,
-		parts: (_parts10 = {}, _parts10[PARTS.HEAD] = images_0.headPart, _parts10[PARTS.TORSO] = images_0.torsoPart, _parts10[PARTS.UPPER] = images_0.upper, _parts10[PARTS.LOWER] = images_0.lower, _parts10)
-	},
-	RONALDO: {
-		label: 'Ronaldo',
-		score: 92,
-		parts: (_parts11 = {}, _parts11[PARTS.HEAD] = images_0.headPart, _parts11[PARTS.TORSO] = images_0.torsoPart, _parts11[PARTS.UPPER] = images_0.upper, _parts11[PARTS.LOWER] = images_0.lower, _parts11)
-	},
-	MESSI: {
-		label: 'Messi',
-		score: 93,
-		parts: (_parts12 = {}, _parts12[PARTS.HEAD] = images_0.headPart, _parts12[PARTS.TORSO] = images_0.torsoPart, _parts12[PARTS.UPPER] = images_0.upper, _parts12[PARTS.LOWER] = images_0.lower, _parts12)
-	},
-	DIEGO_COSTA: {
-		label: 'Diego Costa',
-		score: 91,
-		parts: (_parts13 = {}, _parts13[PARTS.HEAD] = images_0.headPart, _parts13[PARTS.TORSO] = images_0.torsoPart, _parts13[PARTS.UPPER] = images_0.upper, _parts13[PARTS.LOWER] = images_0.lower, _parts13)
-	},
-	CHIELLINI: {
-		label: 'Chiellini',
-		score: 90,
-		parts: (_parts14 = {}, _parts14[PARTS.HEAD] = images_0.headPart, _parts14[PARTS.TORSO] = images_0.torsoPart, _parts14[PARTS.UPPER] = images_0.upper, _parts14[PARTS.LOWER] = images_0.lower, _parts14)
-	},
-	KROOS: {
-		label: 'Kroos',
-		score: 92,
-		parts: (_parts15 = {}, _parts15[PARTS.HEAD] = images_0.headPart, _parts15[PARTS.TORSO] = images_0.torsoPart, _parts15[PARTS.UPPER] = images_0.upper, _parts15[PARTS.LOWER] = images_0.lower, _parts15)
-	},
-	FALCAO: {
-		label: 'Falcao',
-		score: 89,
-		parts: (_parts16 = {}, _parts16[PARTS.HEAD] = images_0.headPart, _parts16[PARTS.TORSO] = images_0.torsoPart, _parts16[PARTS.UPPER] = images_0.upper, _parts16[PARTS.LOWER] = images_0.lower, _parts16)
-	},
-	AUBAMEYANG: {
-		label: 'Aubameyang',
-		score: 90,
-		parts: (_parts17 = {}, _parts17[PARTS.HEAD] = images_0.headPart, _parts17[PARTS.TORSO] = images_0.torsoPart, _parts17[PARTS.UPPER] = images_0.upper, _parts17[PARTS.LOWER] = images_0.lower, _parts17)
-	},
-	ARDA_TURAN: {
-		label: 'Arda Turan',
-		score: 87,
-		parts: (_parts18 = {}, _parts18[PARTS.HEAD] = images_0.headPart, _parts18[PARTS.TORSO] = images_0.torsoPart, _parts18[PARTS.UPPER] = images_0.upper, _parts18[PARTS.LOWER] = images_0.lower, _parts18)
-	},
-	CENK_TOSU: {
-		label: 'Cenk Tosu',
-		score: 88,
-		parts: (_parts19 = {}, _parts19[PARTS.HEAD] = images_0.headPart, _parts19[PARTS.TORSO] = images_0.torsoPart, _parts19[PARTS.UPPER] = images_0.upper, _parts19[PARTS.LOWER] = images_0.lower, _parts19)
-	}
-};
 // CONCATENATED MODULE: ./localised.js
 var _en, _id, _it, _th, _es, _pt, _tr;
 
@@ -3600,6 +3643,9 @@ var twitter_button = __webpack_require__("LtWN");
 var twitter_button_default = /*#__PURE__*/__webpack_require__.n(twitter_button);
 
 // CONCATENATED MODULE: ./components/step-result/index.js
+var step_result__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _MODRIC, _PART_STYLES;
 
 
 
@@ -3610,6 +3656,24 @@ var twitter_button_default = /*#__PURE__*/__webpack_require__.n(twitter_button);
 
 
 
+
+var PLAYER_VARIENTS = {
+	MODRIC: (_MODRIC = {}, _MODRIC[PARTS.HEAD] = {
+		width: '18%'
+	}, _MODRIC)
+};
+
+var PART_STYLES = (_PART_STYLES = {}, _PART_STYLES[PARTS.HEAD] = {
+	width: '15%'
+}, _PART_STYLES[PARTS.TORSO] = {
+	width: '80%'
+}, _PART_STYLES[PARTS.UPPER] = {
+	width: '32%',
+	marginTop: '-10%'
+}, _PART_STYLES[PARTS.LOWER] = {
+	width: '37%',
+	marginTop: '-1%'
+}, _PART_STYLES);
 
 var step_result_Score = function Score(props) {
 	return Object(preact_min["h"])(
@@ -3653,14 +3717,20 @@ var step_result_Score = function Score(props) {
 		return FOOTBALLERS[selectedParts[key]].score;
 	};
 	var score = (getScore(PARTS.TORSO) + getScore(PARTS.UPPER) + getScore(PARTS.LOWER) + getScore(PARTS.HEAD)) / 4;
-
+	var status = legendStatus || localised.warrior;
 	return Object(preact_min["h"])(
 		'div',
 		{ className: step_result_styles_default.a.wrapper },
 		Object(preact_min["h"])(
 			'div',
 			{ className: step_result_styles_default.a.bodyWrapper },
-			Object(preact_min["h"])('img', { className: '' + step_result_styles_default.a.partImage, src: images_0.body })
+			Object.keys(PART_STYLES).map(function (key) {
+				return Object(preact_min["h"])('img', {
+					src: FOOTBALLERS[selectedParts[key]].parts[key],
+					style: step_result__extends({}, PART_STYLES[key], PLAYER_VARIENTS[selectedParts[key]] && PLAYER_VARIENTS[selectedParts[key]][key] || {}),
+					className: step_result_styles_default.a.partImage
+				});
+			})
 		),
 		Object(preact_min["h"])(
 			'div',
@@ -3686,7 +3756,9 @@ var step_result_Score = function Score(props) {
 				Object(preact_min["h"])(
 					'div',
 					null,
-					localised.formatString(localised.youAreA, { legendStatus: legendStatus })
+					localised.formatString(localised.youAreA, {
+						legendStatus: status
+					})
 				)
 			),
 			Object(preact_min["h"])(
@@ -3814,7 +3886,35 @@ function index__inherits(subClass, superClass) { if (typeof superClass !== "func
 
 
 
+
 var STEPS = [{ view: step_intro }, { view: step_builder }, { view: step_video }, { view: step_result }];
+
+function getParameterByName(name) {
+  if (typeof window !== 'undefined') {
+    var url = window.location.href.toUpperCase();
+    var regex = new RegExp(
+    // eslint-disable-next-line
+    '[?&]' + name.replace(/[\[\]]/g, '\\$&') + '(=([^&#]*)|&|#|$)');
+    var results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+  return null;
+}
+
+function getIfExists(key) {
+  var value = getParameterByName(key);
+  if (!value) return null;
+  if (FOOTBALLERS[value] && FOOTBALLERS[value].parts[key]) return value;
+  return null;
+}
+
+var index_getPlayerFromParams = function getPlayerFromParams() {
+  var _ref;
+
+  return _ref = {}, _ref[PARTS.HEAD] = getIfExists(PARTS.HEAD), _ref[PARTS.TORSO] = getIfExists(PARTS.TORSO), _ref[PARTS.UPPER] = getIfExists(PARTS.UPPER), _ref[PARTS.LOWER] = getIfExists(PARTS.LOWER), _ref;
+};
 
 var index_App = function (_Component) {
   index__inherits(App, _Component);
@@ -3831,7 +3931,7 @@ var index_App = function (_Component) {
     return _ret = (_temp = (_this = index__possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
       step: null,
       exitingStep: null,
-      selectedParts: null,
+      selectedParts: index_getPlayerFromParams(),
       legendStatus: null
     }, _this.goTo = function (step) {
       return function (selectedParts, legendStatus) {
@@ -3859,7 +3959,11 @@ var index_App = function (_Component) {
   }
 
   App.prototype.initFirstStep = function initFirstStep() {
-    this.setState({ step: 0 });
+    if (Object.values(this.state.selectedParts).every(Boolean)) {
+      this.setState({ step: 3 });
+    } else {
+      this.setState({ step: 0 });
+    }
   };
 
   App.prototype.componentDidMount = function componentDidMount() {
@@ -3882,8 +3986,8 @@ var index_App = function (_Component) {
           return Object(preact_min["h"])(
             page_layout,
             { transitionState: outerTransitionState },
-            STEPS.map(function (_ref, index) {
-              var View = _ref.view;
+            STEPS.map(function (_ref2, index) {
+              var View = _ref2.view;
               return Object(preact_min["h"])(
                 Transition_default.a,
                 {
